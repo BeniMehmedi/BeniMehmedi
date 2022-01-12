@@ -1,0 +1,284 @@
+@import "_header.scss";
+@import "_menu.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #181818;
+    display: grid;
+    grid-template-rows: 75px 110vh;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 'header header'
+                          'menu container';
+    .container{
+        grid-area: container;
+        .top{
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%) ,url(../images/1059137_gorillaz-hd-wallpapers_1920x1080_h.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+        }
+        .top-rated{
+            position: absolute;
+            top: 270px;
+            color: white;
+            margin-left: 30px;
+        }
+        .song-box{
+            width: 85%;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: 320px;
+            .songs{
+                height: 200px;
+                width: 200px;
+                border-radius: 10px;
+                img{
+                    height: 200px;
+                    width: 200px;
+                    border-radius: 10px;
+                }  
+            }
+            .songs:hover{
+                transform: scale(1.02);
+            }
+        }
+        .trending{
+            margin-top: 75px;
+            margin-left: 30px;
+            height: 300px;
+            h2{
+                color: white;
+                
+            }
+            .trending-box{
+                height: 200px;
+                .trending-container{
+                    margin-top: 15px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                .box{
+                    display: flex;
+                    width: 47%;
+                    background-color: white;
+                    border-radius: 18px;
+                    color: white;
+                    text-decoration: none;
+                    align-items: center;
+                    .box-img{
+                        height: 140px;
+                        width: 100%;
+                        background-image: linear-gradient(45deg, rgba(0,0,0,1) 7%, rgba(0,0,0,0.3785889355742297) 83%),url(../images/panic-2.jpg);
+                        border-radius: 15px;
+                        background-size: cover;    
+                    }
+                .box-img:hover{
+                        transform: scale(1.02);
+                    }
+                }
+             }
+            }
+        }
+       
+    }
+    .playlists{
+        display: flex;
+        height: 200px;
+        width: 450px;
+        padding: 40px; 
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .playlist{
+            background: #212121;
+            border-radius: 15px;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            img{
+                height: 50%;
+                margin: 0 auto;
+            }
+        }
+        .playlist-a{
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            box-sizing: border-box;
+            background: #212121;
+            background-image: linear-gradient(45deg, rgba(0,0,0,1) 7%, rgba(0,0,0,0.3785889355742297) 83%),url(../images/for-miles-a-great-bodyweight-workout-would-include-squats-push-ups-walking-lunges-.jpg);
+            background-size: cover;
+            border-radius: 15px;
+            height: 200px;
+            width: 200px;
+            h3{
+                font-size: 30px;
+            }
+        }
+        .playlist:hover{
+            transform: scale(1.02);
+        }
+        .playlist-a:hover{
+            transform: scale(1.02);
+        }
+    }
+    .u-pick{
+        display: flex;
+        flex-direction: column;
+
+        .choice{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 30px;
+            height: 150px;
+            width: 90%;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            text-decoration: none;
+            h4{
+                color: white;
+                font-size: 50px;
+                margin-left: 50px;
+            }
+        }
+        .choice:hover{
+            transform: scale(1.02);
+        }
+        .metal{
+            background-image:linear-gradient(45deg, rgba(0,0,0,1) 7%, rgba(0,0,0,0.3785889355742297) 83%), url(../images/635649685702147275-Slipknot-2014---Pub-1---M.-Shawn-Crahan-1.jpg);
+        }
+        .rock{
+            background-image:linear-gradient(45deg, rgba(0,0,0,1) 7%, rgba(0,0,0,0.3785889355742297) 83%), url(../images/gettyimages-96403365.jpg);
+        }
+        .rap{
+            background-image:linear-gradient(45deg, rgba(0,0,0,1) 7%, rgba(0,0,0,0.3785889355742297) 83%), url(../images/GettyImages-1205158935-696x442.jpg);
+        }
+        .electronic{
+            background-image:linear-gradient(45deg, rgba(0,0,0,1) 7%, rgba(0,0,0,0.3785889355742297) 83%), url(../images/edm-music-education.jpg);
+        
+        }
+    }
+    .ui{
+        padding: 3%;
+    .playing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 90%;
+        background-image: url(../images/1059137_gorillaz-hd-wallpapers_1920x1080_h.jpg);
+        background-size: cover;
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 60px;
+            background-color: #FF3300;
+            border-radius: 50%;
+            .triangle{
+                background-color: white;
+                height: 30px;
+                width: 30px;
+                margin-left: 5px;
+                clip-path: polygon(0 0, 0% 100%, 100% 50%);
+            }
+        }
+        .button:hover{
+            cursor: pointer;
+        }
+    }
+    .discription{
+        width: 86%;
+        color: white;
+        padding: 2%;
+        background-color:#212121;
+    }
+    .up-next{
+        .up-next-img{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-radius: 15px;
+            height: 100px;
+            width: 90%;
+            margin-top: 3%;
+            background-image:linear-gradient(45deg, rgba(0,0,0,1) 7%, rgba(0,0,0,0.3785889355742297) 83%), url(../images/635649685702147275-Slipknot-2014---Pub-1---M.-Shawn-Crahan-1.jpg);
+            color: white;
+        }
+    }
+    }
+}
+@media screen and (max-width:1200px) {
+    .container{
+        .song-box{
+            .extra{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    body{
+        display: grid;
+        grid-template-rows: 75px 50px 110vh;
+        grid-template-columns: 100%;
+        grid-template-areas: 'header'
+                              'menu'
+                              'container';
+   
+    .container{
+        .song-box{
+            width: 100%;
+            .extra-two{
+                display: none;
+            }
+        }
+    }
+}
+}
+@media screen and (max-width:750px) {
+    .container{
+        .song-box{
+            .extra-three{
+                display: none;
+            }
+        }
+        .trending{
+            .trending-box{
+                width: 100%;
+                margin-left: 0px;
+                .trending-container{
+                    flex-direction: column;
+                    width: 100%;
+                        .box{
+                       width: 90%;
+                       box-sizing: border-box;
+                       .box-img{
+                           width: 100%;
+                           
+                       }
+                    }
+                    .two{
+                        margin-top: 15px;
+                    }
+                    .extra-three{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

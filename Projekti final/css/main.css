@@ -1,0 +1,541 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #212121;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+.header .logo {
+  color: #FF3300;
+  padding-left: 4%;
+}
+
+.header input {
+  border: 2px solid #313131;
+  border-radius: 2px;
+  font-size: 15px;
+  padding-left: 10px;
+  background: #121212;
+  width: 50%;
+  height: 30%;
+}
+
+.header .user-info {
+  padding-right: 30px;
+}
+
+.header .user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #313131;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: menu;
+  background-color: #212121;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .line {
+  background-color: #313131;
+  height: 2px;
+  width: 100%;
+}
+
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: -150px;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu .menu-i {
+  padding-left: 30%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.menu .menu-i:hover {
+  background-color: #313131;
+}
+
+.menu .menu-s {
+  padding-left: 30%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.menu .menu-s:hover {
+  background-color: #313131;
+}
+
+.menu .settings {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: menu;
+    background-color: #212121;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: 2px solid #313131;
+  }
+  .menu .line {
+    display: none;
+  }
+  .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 86%;
+    top: 0px;
+  }
+  .menu .menu-i {
+    width: 80px;
+    height: 50px;
+    padding-bottom: 0;
+    padding-top: 14px;
+  }
+  .menu .settings {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .m-one, .m-two, .m-three {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #181818;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 75px 110vh;
+      grid-template-rows: 75px 110vh;
+  -ms-grid-columns: 15% 85%;
+      grid-template-columns: 15% 85%;
+      grid-template-areas: 'header header' 'menu container';
+}
+
+body .container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: container;
+}
+
+body .container .top {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/1059137_gorillaz-hd-wallpapers_1920x1080_h.jpg);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/1059137_gorillaz-hd-wallpapers_1920x1080_h.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+
+body .container .top-rated {
+  position: absolute;
+  top: 270px;
+  color: white;
+  margin-left: 30px;
+}
+
+body .container .song-box {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 320px;
+}
+
+body .container .song-box .songs {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+body .container .song-box .songs img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+body .container .song-box .songs:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+body .container .trending {
+  margin-top: 75px;
+  margin-left: 30px;
+  height: 300px;
+}
+
+body .container .trending h2 {
+  color: white;
+}
+
+body .container .trending .trending-box {
+  height: 200px;
+}
+
+body .container .trending .trending-box .trending-container {
+  margin-top: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .container .trending .trending-box .trending-container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 47%;
+  background-color: white;
+  border-radius: 18px;
+  color: white;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .trending .trending-box .trending-container .box .box-img {
+  height: 140px;
+  width: 100%;
+  background-image: linear-gradient(45deg, black 7%, rgba(0, 0, 0, 0.378589) 83%), url(../images/panic-2.jpg);
+  border-radius: 15px;
+  background-size: cover;
+}
+
+body .container .trending .trending-box .trending-container .box .box-img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+body .playlists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200px;
+  width: 450px;
+  padding: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .playlists a {
+  text-decoration: none;
+  color: white;
+}
+
+body .playlists .playlist {
+  background: #212121;
+  border-radius: 15px;
+  height: 200px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .playlists .playlist img {
+  height: 50%;
+  margin: 0 auto;
+}
+
+body .playlists .playlist-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #212121;
+  background-image: linear-gradient(45deg, black 7%, rgba(0, 0, 0, 0.378589) 83%), url(../images/for-miles-a-great-bodyweight-workout-would-include-squats-push-ups-walking-lunges-.jpg);
+  background-size: cover;
+  border-radius: 15px;
+  height: 200px;
+  width: 200px;
+}
+
+body .playlists .playlist-a h3 {
+  font-size: 30px;
+}
+
+body .playlists .playlist:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+body .playlists .playlist-a:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+body .u-pick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .u-pick .choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 30px;
+  height: 150px;
+  width: 90%;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+}
+
+body .u-pick .choice h4 {
+  color: white;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+body .u-pick .choice:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+body .u-pick .metal {
+  background-image: linear-gradient(45deg, black 7%, rgba(0, 0, 0, 0.378589) 83%), url(../images/635649685702147275-Slipknot-2014---Pub-1---M.-Shawn-Crahan-1.jpg);
+}
+
+body .u-pick .rock {
+  background-image: linear-gradient(45deg, black 7%, rgba(0, 0, 0, 0.378589) 83%), url(../images/gettyimages-96403365.jpg);
+}
+
+body .u-pick .rap {
+  background-image: linear-gradient(45deg, black 7%, rgba(0, 0, 0, 0.378589) 83%), url(../images/GettyImages-1205158935-696x442.jpg);
+}
+
+body .u-pick .electronic {
+  background-image: linear-gradient(45deg, black 7%, rgba(0, 0, 0, 0.378589) 83%), url(../images/edm-music-education.jpg);
+}
+
+body .ui {
+  padding: 3%;
+}
+
+body .ui .playing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+  width: 90%;
+  background-image: url(../images/1059137_gorillaz-hd-wallpapers_1920x1080_h.jpg);
+  background-size: cover;
+}
+
+body .ui .playing .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 60px;
+  background-color: #FF3300;
+  border-radius: 50%;
+}
+
+body .ui .playing .button .triangle {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+          clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+
+body .ui .playing .button:hover {
+  cursor: pointer;
+}
+
+body .ui .discription {
+  width: 86%;
+  color: white;
+  padding: 2%;
+  background-color: #212121;
+}
+
+body .ui .up-next .up-next-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 15px;
+  height: 100px;
+  width: 90%;
+  margin-top: 3%;
+  background-image: linear-gradient(45deg, black 7%, rgba(0, 0, 0, 0.378589) 83%), url(../images/635649685702147275-Slipknot-2014---Pub-1---M.-Shawn-Crahan-1.jpg);
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .container .song-box .extra {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 75px 50px 110vh;
+        grid-template-rows: 75px 50px 110vh;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: 'header' 'menu' 'container';
+  }
+  body .container .song-box {
+    width: 100%;
+  }
+  body .container .song-box .extra-two {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container .song-box .extra-three {
+    display: none;
+  }
+  .container .trending .trending-box {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .container .trending .trending-box .trending-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .container .trending .trending-box .trending-container .box {
+    width: 90%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .container .trending .trending-box .trending-container .box .box-img {
+    width: 100%;
+  }
+  .container .trending .trending-box .trending-container .two {
+    margin-top: 15px;
+  }
+  .container .trending .trending-box .trending-container .extra-three {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
